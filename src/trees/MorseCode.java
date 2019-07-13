@@ -37,7 +37,6 @@ public class MorseCode {
 			
 			while(j<= s.length() && j<=i+maxdepth){
 				 substr = s.substring(i, j);
-//				System.out.println(substr);
 			   if(pattern.containsKey(substr)){
 				  fill(l,a,pattern.get(substr),j-1);
 			   }
@@ -48,11 +47,9 @@ public class MorseCode {
 	}
     private static void fill(ArrayList<String> l,ArrayList<ArrayList<String>> a,char c,int j){
     	ArrayList<String> k = a.get(j);
-//    	System.out.println(c);
     	for(int i=0;i<l.size();i++){
     		String p = l.get(i);
     		k.add( p+c);
     	}
-//    	System.out.println(a);
     }
 }
